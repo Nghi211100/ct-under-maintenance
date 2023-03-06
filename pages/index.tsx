@@ -1,8 +1,11 @@
+import SwitchLocale from "@/components/SwitchLocale";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   useEffect(() => {
     const s1 = document.createElement("script");
     s1.async = true;
@@ -32,12 +35,12 @@ export default function Home() {
         </div>
         <div className="h-[calc(100vh-64px)] flex flex-col items-center justify-center">
           <Image src={"/images/404.png"} alt="404" width="600" height="400" />
-          <p className="text-[#6B7280] text-lg">
-            Oops! Our website is currently undergoing maintenance. Please come
-            back later.
-          </p>
+          <p className="text-[#6B7280] text-lg">{t("content")}</p>
         </div>
       </main>
+      <footer className="absolute bottom-0 right-28 h-max">
+        <SwitchLocale />
+      </footer>
     </>
   );
 }
