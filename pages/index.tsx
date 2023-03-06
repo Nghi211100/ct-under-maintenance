@@ -1,14 +1,21 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const s1 = document.createElement("script");
+    s1.async = true;
+    s1.src = "https://embed.tawk.to/612a4a45d6e7610a49b27458/1fe6j486i";
+    document.head.appendChild(s1);
+  });
   return (
     <>
       <Head>
         <title>Coinstrat</title>
         <meta
           name="description"
-          content="Our website is currently undergoing maintenance. Please check back later."
+          content="Our website is currently undergoing maintenance. Please come back later."
         />
       </Head>
       <main className="h-screen">
@@ -23,8 +30,12 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="h-[calc(100vh-64px)] flex items-center justify-center">
+        <div className="h-[calc(100vh-64px)] flex flex-col items-center justify-center">
           <Image src={"/images/404.png"} alt="404" width="600" height="400" />
+          <p className="text-[#6B7280] text-lg">
+            Oops! Our website is currently undergoing maintenance. Please come
+            back later.
+          </p>
         </div>
       </main>
     </>
