@@ -24,18 +24,12 @@ export default function Home() {
       <main className="h-screen">
         <div className="flex relative items-center justify-between h-16 shadow">
           <div className="max-w-full px-2 md:px-10">
-            <Image
-              src="/images/logo.svg"
-              alt="logo"
-              className="w-auto"
-              width="157"
-              height="32"
-            />
+            <Image src="/images/logo.png" alt="logo" width="157" height="32" />
           </div>
         </div>
-        <div className="h-[calc(100vh-64px)] flex flex-col items-center justify-center">
-          <Image src={"/images/404.png"} alt="404" width="600" height="400" />
-          <p className="text-[#6B7280] text-lg">{t("content")}</p>
+        <div className="h-[calc(100vh-64px)] flex flex-col items-center justify-center px-3">
+          <Image src={"/images/404.svg"} alt="404" width="600" height="400" />
+          <p className="text-[#6B7280] text-lg text-center">{t("content")}</p>
         </div>
       </main>
       <footer className="absolute bottom-0 right-28 h-max">
