@@ -22,7 +22,7 @@ export default function Home() {
         />
       </Head>
       <main className="h-screen">
-        <div className="flex relative items-center justify-between h-16 shadow">
+        <div className="flex relative items-center justify-center md:justify-between h-16 shadow">
           <div className="max-w-full px-2 md:px-10">
             <Image src="/images/logo.png" alt="logo" width="157" height="32" />
           </div>
