@@ -29,7 +29,18 @@ export default function Home() {
         </div>
         <div className="h-[calc(100vh-64px)] flex flex-col items-center justify-center px-3">
           <Image src={"/images/404.svg"} alt="404" width="600" height="400" />
-          <p className="text-[#6B7280] text-lg text-center">{t("content")}</p>
+          <div className="max-w-2xl">
+            <p className="text-4xl text-center font-bold">{t("title")}</p>
+            <p className="text-[#6B7280] text-base text-center pt-2.5">
+              {t("content")}
+            </p>
+            <p className="text-[#6B7280] text-base text-center pt-2.5">
+              {t("content01")}
+            </p>
+            <p className="text-[#6B7280] text-base text-center pt-2.5">
+              {t("content02")}
+            </p>
+          </div>
         </div>
       </main>
       <footer className="absolute bottom-0 right-28 h-max">
