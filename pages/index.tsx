@@ -27,17 +27,19 @@ export default function Home() {
             <Image src="/images/logo.png" alt="logo" width="157" height="32" />
           </div>
         </div>
-        <div className="h-[calc(100vh-64px)] flex flex-col items-center justify-center px-3">
+        <div className="min-h-[calc(100vh-64px)] flex flex-col items-center justify-center px-3 pb-28">
           <Image src={"/images/404.svg"} alt="404" width="600" height="400" />
           <div className="max-w-5xl">
-            <p className="text-4xl text-center font-bold">{t("title")}</p>
-            <p className="text-[#6B7280] text-base text-center pt-2.5">
+            <p className="md:text-4xl text-3xl text-center font-bold">
+              {t("title")}
+            </p>
+            <p className="text-[#6B7280] text-sm md:text-base text-center pt-2.5">
               {t("content")}
             </p>
-            <p className="text-[#6B7280] text-base text-center pt-2.5">
+            <p className="text-[#6B7280] text-sm md:text-base text-center pt-2.5">
               {t("content01")}
             </p>
-            <p className="text-[#6B7280] text-base text-center pt-2.5">
+            <p className="text-[#6B7280] text-sm md:text-base text-center pt-2.5">
               {t("content02")}
             </p>
           </div>
