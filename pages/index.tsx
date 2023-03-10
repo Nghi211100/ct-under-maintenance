@@ -5,13 +5,15 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const s1 = document.createElement("script");
     s1.async = true;
     s1.src = "https://embed.tawk.to/612a4a45d6e7610a49b27458/1fe6j486i";
     document.head.appendChild(s1);
   });
+  console.log(i18n.language);
+
   return (
     <>
       <Head>
@@ -45,7 +47,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="absolute bottom-0 right-28 h-max">
+      <footer className="fixed bottom-0 right-28 h-max">
         <SwitchLocale />
       </footer>
     </>
