@@ -5,7 +5,7 @@ import { initReactI18next } from "react-i18next";
 
 export default function App({ Component, pageProps }: AppProps) {
   i18next.use(initReactI18next).init({
-    lng: "en",
+    lng: "vi",
     resources: {
       en: {
         translation: require("/locales/en.json"),
