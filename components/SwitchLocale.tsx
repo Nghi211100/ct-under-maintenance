@@ -46,7 +46,7 @@ const SwitchLocale = () => {
         className="block rounded-lg shadow-sm placeholder-gray-400 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent pr-7"
         classNamePrefix="select"
         value={options.find(
-          (item) => item.value === (language ? language : "en")
+          (item) => item.value === (i18n.language ? i18n.language : "en")
         )}
         menuPosition={"fixed"}
         isSearchable={false}
