@@ -1,11 +1,19 @@
 import SwitchLocale from "@/components/SwitchLocale";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
   const { t, i18n } = useTranslation();
+
+  const language =
+    (typeof window !== "undefined" && localStorage.getItem("language")) || "en";
+  useEffect(() => {
+    localStorage.setItem("language", language);
+    i18n.changeLanguage(language);
+  }, [i18n, language]);
+
   useEffect(() => {
     const s1 = document.createElement("script");
     s1.async = true;
