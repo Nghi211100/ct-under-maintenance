@@ -4,9 +4,6 @@ import { useTranslation } from "react-i18next";
 
 const SwitchLocale = () => {
   const { i18n } = useTranslation();
-
-  console.log(i18n.language);
-
   const [language, setLanguage] = useState(
     (typeof window !== "undefined" && localStorage.getItem("language")) || "en"
   );
