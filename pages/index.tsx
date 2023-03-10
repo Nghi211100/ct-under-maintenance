@@ -23,6 +23,9 @@ export default function Home() {
           content="Our website is currently undergoing maintenance. Please come back later."
         />
       </Head>
+      <div className="fixed bottom-0 right-28 h-max">
+        <SwitchLocale />
+      </div>
       <main className="h-screen">
         <div className="flex relative items-center justify-center md:justify-between h-16 shadow">
           <div className="max-w-full px-2 md:px-10">
@@ -47,9 +50,9 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="fixed bottom-0 right-28 h-max">
+      <div className="fixed bottom-0 right-28 h-max">
         <SwitchLocale />
-      </footer>
+      </div>
     </>
   );
 }
