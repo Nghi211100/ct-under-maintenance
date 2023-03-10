@@ -7,9 +7,9 @@ const SwitchLocale = () => {
   const [language, setLanguage] = useState(
     (typeof window !== "undefined" && localStorage.getItem("language")) || "en"
   );
-
-  i18n.changeLanguage(language);
-
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language]);
   useEffect(() => {
     localStorage.setItem("language", language);
     i18n.changeLanguage(language);
