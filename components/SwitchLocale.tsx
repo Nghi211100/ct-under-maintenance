@@ -8,6 +8,8 @@ const SwitchLocale = () => {
     (typeof window !== "undefined" && localStorage.getItem("language")) || "en"
   );
 
+  i18n.changeLanguage(language);
+
   useEffect(() => {
     localStorage.setItem("language", language);
     i18n.changeLanguage(language);

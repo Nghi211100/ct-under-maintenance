@@ -12,7 +12,6 @@ export default function Home() {
     s1.src = "https://embed.tawk.to/612a4a45d6e7610a49b27458/1fe6j486i";
     document.head.appendChild(s1);
   });
-  console.log(i18n.language);
 
   return (
     <>
@@ -23,9 +22,6 @@ export default function Home() {
           content="Our website is currently undergoing maintenance. Please come back later."
         />
       </Head>
-      <div className="fixed bottom-0 right-28 h-max">
-        <SwitchLocale />
-      </div>
       <main className="h-screen">
         <div className="flex relative items-center justify-center md:justify-between h-16 shadow">
           <div className="max-w-full px-2 md:px-10">
@@ -50,9 +46,9 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="fixed bottom-0 right-28 h-max">
+      <footer className="fixed bottom-0 right-28 h-max">
         <SwitchLocale />
-      </div>
+      </footer>
     </>
   );
 }
